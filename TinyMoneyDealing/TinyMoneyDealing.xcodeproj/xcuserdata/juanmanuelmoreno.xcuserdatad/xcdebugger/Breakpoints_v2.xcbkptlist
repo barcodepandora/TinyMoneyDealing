@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "103314B5-0B31-4F53-8B3D-C75C0A91DBCD"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C54E64AD-C076-4449-A028-9284F1B22D1D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TinyMoneyDealing/ViewModel/TinyMoneyDealingViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "deal()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C54E64AD-C076-4449-A028-9284F1B22D1D - a3491db3e708c640"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinyMoneyDealing.TinyMoneyDealingViewModel.deal() -&gt; ()"
+                  moduleName = "TinyMoneyDealing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanmanuelmoreno/Documents/TinyMoneyDealing/TinyMoneyDealing/TinyMoneyDealing/ViewModel/TinyMoneyDealingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  uuid = "C54E64AD-C076-4449-A028-9284F1B22D1D - a3491db3e708c640"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinyMoneyDealing.TinyMoneyDealingViewModel.deal() -&gt; ()"
+                  moduleName = "TinyMoneyDealing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanmanuelmoreno/Documents/TinyMoneyDealing/TinyMoneyDealing/TinyMoneyDealing/ViewModel/TinyMoneyDealingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "261">
+               </Location>
+               <Location
+                  uuid = "C54E64AD-C076-4449-A028-9284F1B22D1D - 82df5d759633936e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinyMoneyDealing.TinyMoneyDealingViewModel.deal() -&gt; Swift.Optional&lt;TinyMoneyDealing.TinyModelDealingModel&gt;"
+                  moduleName = "TinyMoneyDealing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanmanuelmoreno/Documents/TinyMoneyDealing/TinyMoneyDealing/TinyMoneyDealing/ViewModel/TinyMoneyDealingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "299">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
