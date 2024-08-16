@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TinyModelDealingModel: Decodable {
+struct TinyModelDealingModel: Codable {
     let email: String?
     let paymentDetails: PaymentDetails?
     let loanDetails: LoanDetails?
