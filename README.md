@@ -1,64 +1,42 @@
-# ScotiaBankTest
-App TMDB.
+# TinyMoneyDealing
+App present money management from JSON mock.
 
-Por Juan Manuel Moreno Beltran {iOS native}
+# Design
+MVVM 
 
-# Instrucciones
-Al lanzar la app, dar opción "Comenzar".
+Management of data from Model as Codable structs in View Model [JSON > Data > Codable] and presentation to View
 
-Al escoger una categoría de resultados, se muestras resultados nuevos de búsqueda de acuerdo a la categoría.
+View Model instance as a single @EnvironmentObjec from View and as a @StaetObject from App instance and as @ObservableObject to be onserved by the View
 
-Al escribir en el campo de texto, se muestras resultados nuevos de búsqueda de acuerdo al texto escrito.
+Entity instance as a @State from View for presenting as wrapped for nil or empty values
 
-Al tocar una película en la tabla, muestra su poster.
-
-Al dar swipe a la derecha se muestra una vista de filtros. Al tocar un filtro, se muestras resultados nuevos de búsqueda de acuerdo a los filtros (Microinteracciones.
-
-# Arquitectura
-Lineamientos de los principios Clean Architeture
-[https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-
-Patrón de arquitectura MVVM principios SOLID
-[https://medium.com/build-and-run/clean-architecture-en-ios-viper-893c8c3a75a4](https://medium.com/build-and-run/clean-architecture-en-ios-viper-893c8c3a75a4)
+Use of .onAppear when load view
 
 Model
-TMDB | Movie
-
-Business Use Case
-TMDBUseCase
+TinyModelDealingModel | PaymentDetails | PaymentProgress | LoanDetails
 
 ViewModel
-TMDBViewModel 
+TinyModelDealingModelViewModel 
 
 View
-TMDBViewController
+TinyModelDealingModelView
 
 Unit Test
-UseCaseTest
+UnitTinyMOneyDealingTest
 
+UI Test
+UITinyMOneyDealingTest
 
-# Issues
-
-## Memoria
-Agrupación de funcionalidades
-
-Asignaciones con oeradores ternarios
-
-Asignaciones haciendo uso de parámetros por defecto
-
-Gestión de dada desde los casos de uso
-
-Gestión de una clase unica de filtros
-
-Aplicación SOLID Principio D
-
-## Layouts
-Uso de Autolayout en forma programática en vista de lista de películas.
+Adaptive
+Use of Geometry reading for assure size of VStack in Loan Details
 
 # TODO
 
-## Splash Delay
-Hallar la forma de demorar el mostrar contenido después del splash.
+## Architecture
+Consider for future create an Interactor or Use Case layer or migrate to VIPER for more complexity requirements
+## Model
+Consider migrate to use of Codign Keys for local persistance [example: use of SwiftData]
+## UI Design
+Consider Atomic Design for maintenance and reusability
 
-## Device testing
-En este momento no dispongo de una cuenta de Apple Developer activa para hacer pruebas con device para permisos y memory leaks con Instruments
+Consider betterdecision for avoiding spaghetti
