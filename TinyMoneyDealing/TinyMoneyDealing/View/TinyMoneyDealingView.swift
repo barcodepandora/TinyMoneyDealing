@@ -20,34 +20,37 @@ struct TinyMoneyDealingView: View {
                         Text("Due in \(tiny.paymentDetails!.dueInDays!) days")
                             .font(.headline)
                             .foregroundColor(.secondary) // Color grisáceo para texto secundario
-
+                        
                         Spacer()
-
+                        
                         Image(systemName: "calendar") // Ícono de calendario
                             .foregroundColor(.secondary)
                     }
-
+                    
                     Text("$325.93")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-
+                    
                     Text("Next payment 24 Feb")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-
+                    
                     Button("Make a payment") {
                     }
                     .frame(maxWidth: .infinity)
-                    .padding(10) // Add a margin of 1
-                    .background(Color.purple) // Color azul para el botón
+                    .padding(10)
+                    .background(Color(red: 209/255, green: 115/255, blue: 205/255))
                     .foregroundColor(.white)
                     .cornerRadius(8)
                 }
                 .frame(maxWidth: .infinity)
                 
+                Spacer()
+                
                 VStack(alignment: .leading) {
                     VStack {
                         Text("Loan \nDetails")
+                            .padding(.leading, 24)
                             .font(.title)
                             .bold()
                         Spacer()
@@ -55,92 +58,186 @@ struct TinyMoneyDealingView: View {
                     .padding(.bottom)
                     HStack {
                         Text("Left ")
-                            .font(.title)
-                            .bold()
-                        Text("\(tiny.loanDetails!.remainingBalance!)")
-                            .font(.title)
+                            .padding(.leading, 24)
+                            .padding(.trailing, -8)
+                            .font(.subheadline)
+                        Text("$\(tiny.loanDetails!.remainingBalance!)")
+                            .font(.subheadline)
                             .bold()
                         Spacer()
+                        Text("Amount borrowed ")
+                            .font(.subheadline)
+                        Text("$\(tiny.loanDetails!.amountBorrowed!)")
+                            .padding(.leading, -8)
+                            .padding(.trailing, 24)
+                            .font(.subheadline)
+                            .bold()
+                    }
+                    Button("") {
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(10)
+                    .background(Color.green) // Color azul para el botón
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                    
+                    VStack {
+                        HStack {
+                            VStack {
+                                Text("Interest")
+                                    .padding(.leading, 24)
+//                                    .padding(.trailing, -8)
+                                    .font(.subheadline)
+                                Spacer()
+                                Text("$\(tiny.loanDetails!.interestPaidToDate!)")
+                                    .font(.title)
+                                    .bold()
+                            }
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            
+                            Spacer()
+                            
+                            
+                            VStack {
+                                Text("Interests Rate")
+                                    .padding(.leading, 24)
+                                    .padding(.trailing, -8)
+                                    .font(.subheadline)
+                                Text("\(tiny.loanDetails!.interestRate!)")
+                                    .font(.title)
+                                    .bold()
+                            }
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(10)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(10)
+                        
+                        HStack {
+                            VStack {
+                                Text("Loan ID ")
+                                    .padding(.leading, 24)
+                                    .padding(.trailing, -8)
+                                    .font(.subheadline)
+                                Text("\(tiny.loanDetails!.loanID!)")
+                                    .font(.title)
+                                    .bold()
+                            }
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            
+                            Spacer()
+
+                            VStack {
+                                Text("Upcoming \npayments")
+                                    .font(.title)
+                                    .bold()
+                                    .foregroundColor(Color.white)
+                            }
+                            .padding()
+                            .background(Color(red: 209/255, green: 115/255, blue: 205/255))
+                            .cornerRadius(10)
+                            
+                        }
+                    }
+                    //                    .frame(height: 32)
+                    //                    .padding(.horizontal, 100)
+                    //                    .background(Color.green)
+                    //                    .cornerRadius(4)
+                    Spacer()
+                    
+                }
+                .background(Color(red: 228/255, green: 228/255, blue: 228/255))
+                .cornerRadius(24)
+                
+                Spacer()
+                
+                VStack {
+                    VStack {
+                        Text("More Options")
+                            .font(.title)
+                            .bold()
+                            .padding()
+                        
+                        VStack {
+                            Text("Increase Paydown Credit")
+                                .font(.headline)
+                                .bold()
+                                .foregroundColor(Color.white)
+                            Text("Up to $\(tiny.loanDetails!.maxCreditAmount!)")
+                                .font(.subheadline)
+                                .foregroundColor(Color.white)
+                        }
+                        .padding()
+                        .background(Color.purple)
+                        .cornerRadius(10)
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Text("Change repayment date")
+                                .font(.headline)
+                                .bold()
+                            Text("Currently on the \(tiny.loanDetails!.repaymentDay!)th")
+                                .font(.subheadline)
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Text("Update payment details")
+                                .font(.headline)
+                                .bold()
+                            Text("Account ending \(tiny.loanDetails!.lastFourPaymentCard!)")
+                                .font(.subheadline)
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Text("Update personal information")
+                                .font(.headline)
+                                .bold()
+                            Text("dyalland@gmail.com")
+                                .font(.subheadline)
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Text("View saved documents")
+                                .font(.headline)
+                                .bold()
+                            Text("\(tiny.loanDetails!.numberOfDocuments!) documents")
+                                .font(.subheadline)
+//                                .padding()
+//                                .background(Color.gray.opacity(0.2))
+//                                .cornerRadius(10)
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        
                     }
                 }
-                
-                VStack(alignment: .leading) {
-                    Text("Email:")
-                    Text(tiny.email!)
-                        .foregroundColor(.secondary)
-                }
-                
-                VStack(alignment: .leading) {
-                    Text("Payment Details")
-                        .font(.title2)
-                        .bold()
-                    VStack(alignment: .leading) {
-                        Text("Due in:")
-                        Text("\(tiny.paymentDetails!.dueInDays!) days")
-                            .foregroundColor(.secondary)
-                        Text("Amount Due:")
-                        Text("$ \((tiny.paymentDetails?.amountDue!)!, specifier: "%.2f")")
-                            .foregroundColor(.secondary)
-                        Text("Next Payment Date:")
-                        Text((tiny.paymentDetails?.nextPaymentDate!)!)
-                            .foregroundColor(.secondary)
-                    }
-                    .padding(.top)
-                }
-                
-                VStack(alignment: .leading) {
-                    Text("Payment Progress")
-                        .font(.title2)
-                        .bold()
-                    VStack(alignment: .leading) {
-                        Text("Current Payment Number:")
-                        Text("\(tiny.paymentDetails!.paymentProgress!.currentPaymentNumber!)")
-                            .foregroundColor(.secondary)
-                        Text("Total Payments:")
-                        Text("\(tiny.paymentDetails!.paymentProgress!.totalPayments!)")
-                            .foregroundColor(.secondary)
-                    }
-                    .padding(.top)
-                }
-                
-                VStack(alignment: .leading) {
-                    Text("Loan Details")
-                        .font(.title2)
-                        .bold()
-                    VStack(alignment: .leading) {
-                        Text("Loan ID:")
-                        Text((tiny.loanDetails?.loanID!)!)
-                            .foregroundColor(.secondary)
-                        Text("Remaining Balance:")
-                        Text("$ \(tiny.loanDetails!.remainingBalance!, specifier: "%.0f")")
-                            .foregroundColor(.secondary)
-                        Text("Amount Borrowed:")
-                        Text("$ \(tiny.loanDetails!.amountBorrowed!, specifier: "%.0f")")
-                            .foregroundColor(.secondary)
-                        Text("Interest Paid to Date:")
-                        Text("$ \(tiny.loanDetails!.interestPaidToDate!, specifier: "%.2f")")
-                            .foregroundColor(.secondary)
-                        Text("Interest Rate:")
-                        Text("\(tiny.loanDetails!.interestRate!, specifier: "%.1f")%")
-                            .foregroundColor(.secondary)
-                        Text("Max Credit Amount:")
-                        Text("$ \(tiny.loanDetails!.maxCreditAmount!, specifier: "%.0f")")
-                            .foregroundColor(.secondary)
-                        Text("Repayment Day:")
-                        Text("\(tiny.loanDetails!.repaymentDay!)")
-                            .foregroundColor(.secondary)
-                        Text("Last Four Payment Card:")
-                        Text((tiny.loanDetails?.lastFourPaymentCard!)!)
-                            .foregroundColor(.secondary)
-                        Text("Number of Documents:")
-                        Text("\(tiny.loanDetails!.numberOfDocuments!)")
-                            .foregroundColor(.secondary)
-                    }
-                    .padding(.top)
-                }
-                .onAppear { tiny = vm.deal()! }
+                .background(Color(red: 228/255, green: 228/255, blue: 228/255))
+                .cornerRadius(24)
+
             }
-            .padding()
+            .onAppear { tiny = vm.deal()! }
         }
     }
 }

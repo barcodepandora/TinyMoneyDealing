@@ -14,7 +14,6 @@ struct TinyMoneyDealingApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            ContentView()
             TinyMoneyDealingView().environmentObject(vm)
         }
     }

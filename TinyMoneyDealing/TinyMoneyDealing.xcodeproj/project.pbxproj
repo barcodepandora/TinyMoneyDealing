@@ -104,6 +104,7 @@
 		5669DF982C6E553E001659F0 /* TinyMoneyDealing */ = {
 			isa = PBXGroup;
 			children = (
+				56ADC38D2C6FCAEC007065E8 /* Test */,
 				5669DFC92C6E7F70001659F0 /* Model */,
 				5669DFC62C6E5741001659F0 /* ViewModel */,
 				5669DFC32C6E56DC001659F0 /* View */,
@@ -144,8 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				5669DFC42C6E56F6001659F0 /* TinyMoneyDealingView.swift */,
-				5669DFCC2C6E9000001659F0 /* UITinyMoneyDealingTest.swift */,
-				5669DFCE2C6E92D4001659F0 /* UnitTinyMOneyDealingTest.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +163,15 @@
 				5669DFCA2C6E7F92001659F0 /* TinyModelDealingModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		56ADC38D2C6FCAEC007065E8 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				5669DFCC2C6E9000001659F0 /* UITinyMoneyDealingTest.swift */,
+				5669DFCE2C6E92D4001659F0 /* UnitTinyMOneyDealingTest.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

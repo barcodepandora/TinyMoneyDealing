@@ -11,7 +11,7 @@ protocol TinyMoneyDealingViewModelProtocol {
     func deal() -> TinyModelDealingModel?
 }
 
-final class TinyMoneyDealingViewModel: TinyMoneyDealingViewModelProtocol, ObservableObject {
+class TinyMoneyDealingViewModel: TinyMoneyDealingViewModelProtocol, ObservableObject {
     var mock: String = """
     {
         \"email\": \"example@example.com\", \"paymentDetails\": {
@@ -25,13 +25,11 @@ final class TinyMoneyDealingViewModel: TinyMoneyDealingViewModelProtocol, Observ
     """
     
     func deal() -> TinyModelDealingModel? {
-        print("Trying")
         var jsonString = mock
         let jsonData = jsonString.data(using: .utf8)!
         let decoder = JSONDecoder()
         do {
             let tiny = try decoder.decode(TinyModelDealingModel.self, from: jsonData)
-            print(tiny.email)
             return tiny
         } catch {
             print("Error: \(error)")
