@@ -1,5 +1,5 @@
 # TinyMoneyDealing
-App present monet management from JSON mock.
+App present money management from JSON mock.
 
 # Design
 MVVM 
